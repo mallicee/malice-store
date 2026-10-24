@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="description" content="MALICE — streetwear-магазин в Telegram. Футболки, лонгсливы, кепки и стикеры коллекции 01.">
+<title>MALICE — Store</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://site-improvement-02263b.netlify.app/.netlify/images?url=/img/tee.png&w=900&h=640&fit=cover&fm=webp&q=78">
+<style>
+:root{color-scheme:dark;--bg:#0a0a0c;--bg2:#111114;--card:#141418;--line:#24242b;--line2:#34343d;--text:#f3f3f1;--muted:#9a9aa3;--dim:#6b6b74;--accent:#e8ff3a;--accent-ink:#0a0a0c;--danger:#ff5c5c;--r:22px;--ease:cubic-bezier(.2,.8,.2,1);--display:Unbounded,system-ui,sans-serif;--body:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;--safe-b:env(safe-area-inset-bottom)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}body{min-height:100vh;padding:calc(env(safe-area-inset-top) + 14px) 0 calc(var(--safe-b) + 110px);overflow-x:hidden}body.locked{overflow:hidden}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}img{display:block;max-width:100%}button{font:inherit;color:inherit}.wrap{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:0 14px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 2px 14px}.brand{font-family:var(--display);font-weight:900;font-size:21px;letter-spacing:.16em}.brand i{font-style:normal;color:var(--accent)}.cartchip{display:flex;align-items:center;gap:8px;border:1px solid var(--line2);background:#ffffff06;border-radius:999px;padding:8px 12px 8px 10px;font-size:12px;font-weight:700;cursor:pointer;transition:transform .2s var(--ease),border-color .2s}.cartchip:active{transform:scale(.95)}.cartchip svg{width:17px;height:17px}.cartchip b{min-width:20px;height:20px;border-radius:99px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:11px;padding:0 6px}.cartchip.bump{animation:bump .45s var(--ease)}@keyframes bump{40%{transform:scale(1.12)}}
+.hero{position:relative;border-radius:28px;overflow:hidden;min-height:clamp(330px,92vw,440px);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;isolation:isolate;border:1px solid var(--line)}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;z-index:-2;transform:scale(1.04);animation:heroIn 1.6s var(--ease) both}.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0a0a0c55 0%,#0a0a0c00 30%,#0a0a0cd9 72%,#0a0a0c 100%)}@keyframes heroIn{from{transform:scale(1.14);opacity:0}}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}.hero .hello{position:absolute;top:18px;left:20px;font-size:12px;color:#d7d7d7;font-weight:600}h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,9.4vw,52px);line-height:.95;letter-spacing:-.04em;margin:12px 0 10px;text-transform:uppercase}h1 em{font-style:normal;color:var(--accent)}.sub{color:#c4c4c8;font-size:13.5px;line-height:1.55;margin:0;max-width:34ch}.hero .cta{margin-top:16px;align-self:flex-start}
+.marquee{margin:14px -14px 0;overflow:hidden;border-block:1px solid var(--line);padding:10px 0;white-space:nowrap}.marquee div{display:inline-block;animation:mq 22s linear infinite;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--dim)}.marquee span{margin:0 14px}.marquee span:nth-child(even){color:var(--accent)}@keyframes mq{to{transform:translateX(-50%)}}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.perk{border:1px solid var(--line);border-radius:16px;padding:12px 10px;background:var(--bg2)}.perk b{display:block;font-size:12px;margin-bottom:3px}.perk span{font-size:10.5px;color:var(--muted);line-height:1.35}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin:28px 2px 12px}h2{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:-.02em;margin:0}.muted{font-size:11px;color:var(--muted);letter-spacing:.06em}.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -14px 14px;padding:0 14px}.chips::-webkit-scrollbar{display:none}.chip{flex:none;border:1px solid var(--line2);background:transparent;border-radius:999px;padding:9px 15px;font-size:12.5px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s var(--ease)}.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);cursor:pointer;opacity:0;transform:translateY(14px);animation:rise .6s var(--ease) forwards;transition:border-color .2s}.card:active{transform:scale(.98)}@keyframes rise{to{opacity:1;transform:none}}.card.wide{grid-column:span 2}.card.wide .visual{aspect-ratio:16/10}.visual{position:relative;aspect-ratio:1/1;background:#1a1a1f;overflow:hidden}.visual img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease),opacity .4s;opacity:0}.visual img.ok{opacity:1}.card:hover .visual img{transform:scale(1.05)}.badge{position:absolute;top:10px;left:10px;font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 8px;border-radius:8px;background:var(--accent);color:var(--accent-ink)}.badge.alt{background:#ffffffe6;color:#111}.incart{position:absolute;top:10px;right:10px;min-width:24px;height:24px;border-radius:99px;background:var(--text);color:var(--bg);font-size:11px;font-weight:800;display:none;place-items:center;padding:0 7px}.incart.on{display:grid}.info{padding:12px 12px 13px}.name{font-size:14px;font-weight:800;line-height:1.25}.desc{font-size:11.5px;color:var(--muted);line-height:1.4;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.buy{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:11px}.price{font-size:15px;font-weight:800;white-space:nowrap}.plus{width:36px;height:36px;border-radius:12px;border:0;background:var(--text);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}.plus:active{transform:scale(.88)}.plus svg{width:16px;height:16px}
+.btn{border:1px solid var(--line2);background:#ffffff08;color:var(--text);padding:12px 16px;border-radius:14px;cursor:pointer;font-weight:700;font-size:14px;transition:transform .15s,opacity .2s}.btn:active{transform:scale(.97)}.btn:disabled{opacity:.4;pointer-events:none}.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent;font-weight:800}.full{width:100%}
+.faq{margin-top:10px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2);overflow:hidden}.faq details{border-bottom:1px solid var(--line)}.faq details:last-child{border-bottom:0}.faq summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:700;font-size:14px;display:flex;justify-content:space-between;gap:10px}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-size:18px;color:var(--muted);transition:transform .25s var(--ease)}.faq details[open] summary::after{transform:rotate(45deg)}.faq p{margin:0;padding:0 18px 16px;color:var(--muted);font-size:13px;line-height:1.55}.foot{text-align:center;color:var(--dim);font-size:10.5px;letter-spacing:.08em;margin:28px 0 0;line-height:1.7}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px 14px calc(var(--safe-b) + 12px);background:linear-gradient(180deg,#0a0a0c00,#0a0a0cf0 30%);transform:translateY(120%);transition:transform .35s var(--ease)}.bar.on{transform:none}.bar .btn{max-width:612px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:18px;box-shadow:0 10px 40px #e8ff3a33}
+.scrim{position:fixed;inset:0;z-index:30;background:#000a;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .3s}.scrim.on{opacity:1;pointer-events:auto}.sheet{position:fixed;left:0;right:0;bottom:0;z-index:31;max-width:640px;margin:0 auto;max-height:92vh;overflow-y:auto;background:var(--bg2);border:1px solid var(--line);border-bottom:0;border-radius:28px 28px 0 0;padding:10px 18px calc(var(--safe-b) + 18px);transform:translateY(105%);transition:transform .42s var(--ease);overscroll-behavior:contain}.sheet.on{transform:none}.grab{width:40px;height:5px;border-radius:9px;background:var(--line2);margin:0 auto 12px}.x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line2);background:#0a0a0caa;display:grid;place-items:center;cursor:pointer;z-index:2}.x svg{width:14px;height:14px}.pimg{border-radius:20px;overflow:hidden;aspect-ratio:1/1;background:#1a1a1f}.pimg img{width:100%;height:100%;object-fit:cover}.ptitle{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:16px 0 6px}.ptitle h3{font-family:var(--display);font-size:20px;line-height:1.1;margin:0;letter-spacing:-.02em}.ptitle .price{font-size:18px}.pdesc{color:var(--muted);font-size:13.5px;line-height:1.55;margin:0 0 14px}.specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.specs span{font-size:11px;color:#cfcfd4;border:1px solid var(--line2);border-radius:99px;padding:5px 10px}.label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:8px;display:flex;justify-content:space-between}.sizes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.size{min-width:52px;padding:11px 12px;border-radius:12px;border:1px solid var(--line2);background:transparent;font-weight:800;font-size:13px;cursor:pointer;transition:all .15s}.size[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}.row{display:flex;gap:10px;align-items:stretch}.stepper{display:flex;align-items:center;border:1px solid var(--line2);border-radius:14px;overflow:hidden}.stepper button{width:42px;height:100%;min-height:46px;border:0;background:transparent;font-size:18px;cursor:pointer}.stepper output{min-width:26px;text-align:center;font-weight:800}.row .primary{flex:1}
+.citem{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.citem img{width:64px;height:64px;border-radius:14px;object-fit:cover;background:#1a1a1f}.citem .n{font-weight:800;font-size:13.5px}.citem .m{font-size:11.5px;color:var(--muted);margin-top:3px}.citem .stepper button{min-height:34px;width:32px;font-size:16px}.citem .stepper{border-radius:11px}.citem .sum{font-weight:800;font-size:13px;text-align:right;margin-top:6px}.empty{text-align:center;padding:30px 10px 20px;color:var(--muted);font-size:13px;line-height:1.6}.empty b{display:block;font-family:var(--display);font-size:16px;color:var(--text);margin-bottom:6px}.totals{margin:14px 0 16px;font-size:13px}.totals div{display:flex;justify-content:space-between;padding:4px 0;color:var(--muted)}.totals .grand{color:var(--text);font-weight:900;font-size:17px;padding-top:10px;margin-top:6px;border-top:1px dashed var(--line2)}.progress{height:4px;border-radius:9px;background:var(--line);overflow:hidden;margin:8px 0 4px}.progress i{display:block;height:100%;background:var(--accent);border-radius:9px;transition:width .4s var(--ease)}.hint{font-size:11.5px;color:var(--muted)}.notice{display:none;margin-top:12px;padding:12px 14px;border-radius:14px;background:#ffffff0a;border:1px solid var(--line2);color:#d6d6da;font-size:12.5px;line-height:1.5;overflow-wrap:anywhere}.notice.on{display:block}.notice.err{border-color:#ff5c5c55;color:#ffb3b3}
+.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top) + 14px);z-index:50;transform:translate(-50%,-140%);background:var(--text);color:var(--bg);font-weight:800;font-size:13px;padding:11px 16px;border-radius:14px;box-shadow:0 10px 30px #0008;transition:transform .35s var(--ease);white-space:nowrap}.toast.on{transform:translate(-50%,0)}
+@media(min-width:560px){.grid{gap:12px}.perk{padding:14px}}@media(max-width:350px){.perks{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card.wide{grid-column:auto}}@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="brand">MALIC<i>E</i></div>
+    <button class="cartchip" id="cartChip" type="button" aria-label="Открыть корзину">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      Корзина <b id="chipCount">0</b>
+    </button>
+  </header>
+  <section class="hero">
+    <img src="https://site-improvement-02263b.netlify.app/.netlify/images?url=/img/tee.png&w=900&h=640&fit=cover&fm=webp&q=78" alt="Футболка MALICE из коллекции 01" fetchpriority="high">
+    <span class="hello" id="hello"></span>
+    <span class="eyebrow">Streetwear · Collection 01</span>
+    <h1>Меньше шума.<br><em>Больше</em> стиля.</h1>
+    <p class="sub">Плотный хлопок, чистые силуэты и ничего лишнего. Собери корзину — заказ уйдёт прямо боту.</p>
+    <button class="btn primary cta" type="button" data-scroll="#catalog">Смотреть коллекцию →</button>
+  </section>
+  <div class="marquee" aria-hidden="true"><div><span>COLLECTION 01</span><span>✦</span><span>MALICE</span><span>✦</span><span>LIMITED DROP</span><span>✦</span><span>HEAVY COTTON</span><span>✦</span><span>COLLECTION 01</span><span>✦</span><span>MALICE</span><span>✦</span><span>LIMITED DROP</span><span>✦</span><span>HEAVY COTTON</span><span>✦</span></div></div>
+  <section class="perks"><div class="perk"><b>Лимит</b><span>Небольшой тираж каждой модели</span></div><div class="perk"><b>Без предоплаты</b><span>Подтверждаем заказ в чате</span></div><div class="perk"><b>Обмен</b><span>Не подошёл размер — поменяем</span></div></section>
+  <div class="head" id="catalog"><h2>Каталог</h2><span class="muted" id="shown">4 модели</span></div>
+  <nav class="chips" id="chips" aria-label="Категории"></nav>
+  <section class="grid" id="products"></section>
+  <div class="head"><h2>Вопросы</h2></div>
+  <section class="faq">
+    <details><summary>Как оформить заказ?</summary><p>Добавь вещи в корзину и нажми «Оформить заказ». Бот пришлёт сообщение с подтверждением и уточнит детали доставки.</p></details>
+    <details><summary>Как выбрать размер?</summary><p>Футболки и лонгсливы свободного кроя. Если сомневаешься — бери свой обычный размер для оверсайз-посадки или на размер меньше для классической.</p></details>
+    <details><summary>Как оплатить?</summary><p>Онлайн-оплата пока не подключена — способ оплаты согласуем в чате после подтверждения заказа.</p></details>
+  </section>
+  <div class="foot">MALICE © 2026 · Заказ подтверждается сообщением бота</div>
+</main>
+<div class="bar" id="bar"><button class="btn primary full" id="barBtn" type="button"><span>Оформить заказ</span><span id="barTotal">0 ₽</span></button></div>
+<div class="scrim" id="scrim"></div>
+<section class="sheet" id="productSheet" role="dialog" aria-modal="true" aria-label="Товар"><div class="grab"></div><button class="x" type="button" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div id="productBody"></div></section>
+<section class="sheet" id="cartSheet" role="dialog" aria-modal="true" aria-label="Корзина"><div class="grab"></div><button class="x" type="button" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button><h2 style="margin:4px 0 4px">Корзина</h2><span class="muted" id="count">0 товаров</span><div id="cartItems"></div><div id="cartFoot"></div><div class="notice" id="notice" role="status"></div></section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {'use strict';
+const tg = window.Telegram?.WebApp || null;
+// initData is not used as a gate for checkout: Telegram's launch modes differ.
+const inTg = !!(tg && (tg.initData || typeof tg.openTelegramLink === 'function'));
+try { tg?.ready(); tg?.expand(); tg?.setHeaderColor?.('#0a0a0c'); tg?.setBackgroundColor?.('#0a0a0c'); } catch (e) { console.warn(e) }
+const products = [
+  {id:1,name:'Футболка MALICE',price:1290,description:'Базовая футболка с логотипом MALICE',img:'tee',cat:'wear',badge:'Хит',long:'Плотная оверсайз-футболка с минималистичным логотипом на груди. Держит форму после стирок и выглядит одинаково хорошо с джинсами и карго.',specs:['100% хлопок','Плотность 240 г/м²','Оверсайз'],sizes:['S','M','L','XL']},
+  {id:2,name:'Лонгслив MALICE',price:1790,description:'Лонгслив с принтом MALICE',img:'longsleeve',cat:'wear',badge:'New',long:'Лонгслив с крупным графичным принтом MALICE на спине. Межсезонная база: один — на тёплый день, под куртку — на холодный.',specs:['100% хлопок','Шелкография','Свободный крой'],sizes:['S','M','L','XL']},
+  {id:4,name:'Кепка Mono',price:990,description:'Кепка Mono',img:'cap',cat:'acc',long:'Шестипанельная кепка из матового хлопкового твила с вышитым логотипом MALICE. Регулируемая застёжка сзади.',specs:['Хлопковый твил','Регулируемая','Вышивка'],sizes:['One size']},
+  {id:5,name:'Стикерпак',price:790,description:'Набор фирменных стикеров MALICE',img:'stickers',cat:'acc',badge:'Подарок',alt:true,long:'Стикерпак MALICE: виниловые логотипы, розы, черепа и звёзды. Для ноутбука, телефона, скейта — куда угодно.',specs:['Винил','Влагостойкие','12 шт.'],sizes:['One size']}
+];
+const cats=[{id:'all',name:'Все'},{id:'wear',name:'Одежда'},{id:'acc',name:'Аксессуары'}];
+const FREE_SHIP=5000;
+const $=s=>document.querySelector(s);
+const rub=n=>new Intl.NumberFormat('ru-RU').format(n)+' ₽';
+const plural=n=>{const a=n%10,b=n%100;return a===1&&b!==11?'товар':a>=2&&a<=4&&(b<10||b>=20)?'товара':'товаров'};
+const img=(key,w,h)=>`https://site-improvement-02263b.netlify.app/.netlify/images?url=/img/${key}.png&w=${w}${h?`&h=${h}&fit=cover`:''}&fm=webp&q=80`;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const byId=id=>products.find(p=>p.id===id);
+const haptic=(t='light')=>{try{tg?.HapticFeedback?.impactOccurred(t)}catch{}};
+let cart={};try{cart=JSON.parse(localStorage.getItem('malice_cart')||'{}')||{}}catch{}
+// Remove the discontinued hoodie (product ID 3) from an existing saved basket; keep every other item.
+for (const key of Object.keys(cart)) { if (+key.split('|')[0] === 3) delete cart[key]; }
+try { localStorage.setItem('malice_cart', JSON.stringify(cart)); } catch {}
+const lines=()=>Object.entries(cart).filter(([k,q])=>q>0&&byId(+k.split('|')[0])).map(([k,q])=>{const [id,size]=k.split('|');return {key:k,p:byId(+id),size,q}});
+const pieces=()=>lines().reduce((n,l)=>n+l.q,0);
+const total=()=>lines().reduce((n,l)=>n+l.p.price*l.q,0);
+const qtyOf=id=>lines().filter(l=>l.p.id===id).reduce((n,l)=>n+l.q,0);
+const save=()=>{try{localStorage.setItem('malice_cart',JSON.stringify(cart))}catch{}};
+function change(key,d){cart[key]=(cart[key]||0)+d;if(cart[key]<=0)delete cart[key];save();render()}
+let filter='all';
+function renderCatalog(){
+  $('#chips').innerHTML=cats.map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===filter}">${c.name}</button>`).join('');
+  const list=products.filter(p=>filter==='all'||p.cat===filter);
+  $('#shown').textContent=`${list.length} ${list.length===1?'модель':list.length<5?'модели':'моделей'}`;
+  $('#products').innerHTML=list.map((p,i)=>{const wide=p.wide&&filter==='all';return `<article class="card${wide?' wide':''}" data-open="${p.id}" style="animation-delay:${i*70}ms"><div class="visual"><img src="${wide?img(p.img,900,560):img(p.img,480)}" alt="${esc(p.name)}" loading="lazy" onload="this.classList.add('ok')">${p.badge?`<span class="badge${p.alt?' alt':''}">${p.badge}</span>`:''}<span class="incart" data-incart="${p.id}"></span></div><div class="info"><div class="name">${esc(p.name)}</div><div class="desc">${esc(p.description)}</div><div class="buy"><span class="price">${rub(p.price)}</span><button class="plus" type="button" data-quick="${p.id}" aria-label="Добавить ${esc(p.name)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div></article>`}).join('');
+  renderBadges();
+}
+function renderBadges(){document.querySelectorAll('[data-incart]').forEach(el=>{const q=qtyOf(+el.dataset.incart);el.textContent=q;el.classList.toggle('on',q>0)})}
+function renderCart(){
+ const n=pieces(),t=total(),ls=lines();$('#chipCount').textContent=n;$('#count').textContent=`${n} ${plural(n)}`;
+ $('#cartItems').innerHTML=ls.length?ls.map(l=>`<div class="citem"><img src="${img(l.p.img,160,160)}" alt="" loading="lazy"><div><div class="n">${esc(l.p.name)}</div><div class="m">${l.size!=='One size'?'Размер '+esc(l.size)+' · ':''}${rub(l.p.price)}</div></div><div><div class="stepper"><button type="button" data-dec="${esc(l.key)}" aria-label="Уменьшить">−</button><output>${l.q}</output><button type="button" data-inc="${esc(l.key)}" aria-label="Добавить">+</button></div><div class="sum">${rub(l.p.price*l.q)}</div></div></div>`).join(''):`<div class="empty"><b>Пока пусто</b>Загляни в каталог — там футболка MALICE уже ждёт.</div>`;
+ const left=Math.max(0,FREE_SHIP-t);
+ $('#cartFoot').innerHTML=ls.length?`<div class="totals"><div><span>Товары (${n})</span><span>${rub(t)}</span></div><div><span>Доставка</span><span>${left?'уточнит бот':'бесплатно'}</span></div><div class="grand"><span>Итого</span><span>${rub(t)}</span></div></div><div class="hint">${left?`Ещё ${rub(left)} до бесплатной доставки`:'Бесплатная доставка — твоя ✦'}</div><div class="progress"><i style="width:${Math.min(100,t/FREE_SHIP*100)}%"></i></div><button class="btn primary full" id="checkout" type="button" style="margin-top:14px">Отправить заказ боту · ${rub(t)}</button>`:`<button class="btn full" type="button" data-close>Перейти в каталог</button>`;
+}
+function render(){renderCart();renderBadges();syncMain()}
+function syncMain(){const n=pieces(),t=total(),sheetOpen=!!openSheet;const label=openSheet==='cart'?`Отправить заказ · ${rub(t)}`:`Корзина · ${n} ${plural(n)} · ${rub(t)}`;if(inTg&&tg.MainButton){if(n>0&&openSheet!=='product')tg.MainButton.setParams({text:label,color:'#e8ff3a',text_color:'#0a0a0c',is_visible:true,is_active:true});else tg.MainButton.hide()}else{$('#bar').classList.toggle('on',n>0&&!sheetOpen);$('#barTotal').textContent=`${n} · ${rub(t)}`}}
+function onMain(){if(openSheet==='cart')checkout();else showCart()}
+if(inTg)tg.MainButton?.onClick(onMain);
+$('#barBtn').addEventListener('click',showCart);
+let openSheet=null;
+function open(name){closeSheets(true);openSheet=name;$(name==='cart'?'#cartSheet':'#productSheet').classList.add('on');$('#scrim').classList.add('on');document.body.classList.add('locked');try{tg?.BackButton?.show()}catch{}syncMain()}
+function closeSheets(silent){document.querySelectorAll('.sheet.on').forEach(s=>s.classList.remove('on'));$('#scrim').classList.remove('on');document.body.classList.remove('locked');openSheet=null;if(!silent){try{tg?.BackButton?.hide()}catch{};syncMain()}}
+tg?.BackButton?.onClick(()=>closeSheets());$('#scrim').addEventListener('click',()=>closeSheets());document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheets()});
+let sel={};
+function showProduct(id){const p=byId(id);sel={id,size:p.sizes.length===1?p.sizes[0]:null,q:1};const sizes=p.sizes.length>1;$('#productBody').innerHTML=`<div class="pimg"><img src="${img(p.img,900)}" alt="${esc(p.name)}"></div><div class="ptitle"><h3>${esc(p.name)}</h3><span class="price">${rub(p.price)}</span></div><p class="pdesc">${esc(p.long)}</p><div class="specs">${p.specs.map(s=>`<span>${esc(s)}</span>`).join('')}</div>${sizes?`<div class="label"><span>Размер</span><span id="sizeHint">выбери размер</span></div><div class="sizes">${p.sizes.map(s=>`<button class="size" type="button" data-size="${s}" aria-pressed="false">${s}</button>`).join('')}</div>`:''}<div class="row"><div class="stepper"><button type="button" data-pq="-1" aria-label="Меньше">−</button><output id="pq">1</output><button type="button" data-pq="1" aria-label="Больше">+</button></div><button class="btn primary" type="button" id="addBtn">В корзину · ${rub(p.price)}</button></div>`;open('product');$('#productSheet').scrollTop=0}
+function addSelected(){const p=byId(sel.id);if(!sel.size){const h=$('#sizeHint');h.textContent='сначала выбери размер';h.style.color='var(--accent)';try{tg?.HapticFeedback?.notificationOccurred('warning')}catch{};return}change(`${p.id}|${sel.size}`,sel.q);haptic('medium');toast(`${p.name} — в корзине`);bumpChip();closeSheets()}
+function showCart(){$('#notice').className='notice';open('cart')}
+let tt;function toast(s){const t=$('#toast');t.textContent=s;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1800)}function bumpChip(){const c=$('#cartChip');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump')}
+function notice(s,err){const n=$('#notice');n.textContent=s;n.className='notice on'+(err?' err':'')}
+document.addEventListener('click',e=>{const t=e.target;const q=t.closest('[data-quick]');if(q){e.stopPropagation();const p=byId(+q.dataset.quick);if(p.sizes.length>1)return showProduct(p.id);change(`${p.id}|${p.sizes[0]}`,1);haptic();toast(`${p.name} — в корзине`);bumpChip();return}const o=t.closest('[data-open]');if(o)return showProduct(+o.dataset.open);const c=t.closest('[data-cat]');if(c){filter=c.dataset.cat;haptic('soft');return renderCatalog()}const sz=t.closest('[data-size]');if(sz){sel.size=sz.dataset.size;haptic('soft');document.querySelectorAll('[data-size]').forEach(b=>b.setAttribute('aria-pressed',b===sz));const h=$('#sizeHint');h.textContent=sel.size;h.style.color='';return}const pq=t.closest('[data-pq]');if(pq){sel.q=Math.max(1,Math.min(10,sel.q + +pq.dataset.pq));$('#pq').textContent=sel.q;$('#addBtn').textContent=`В корзину · ${rub(byId(sel.id).price*sel.q)}`;haptic('soft');return}if(t.closest('#addBtn'))return addSelected();const inc=t.closest('[data-inc]');if(inc){haptic('soft');return change(inc.dataset.inc,1)}const dec=t.closest('[data-dec]');if(dec){haptic('soft');return change(dec.dataset.dec,-1)}if(t.closest('#checkout'))return checkout();if(t.closest('[data-close]'))return closeSheets();if(t.closest('#cartChip'))return showCart();const sc=t.closest('[data-scroll]');if(sc)$(sc.dataset.scroll).scrollIntoView({behavior:'smooth'})});
+
+// Checkout via a compact Telegram start-link. Unlike sendData(), this works for Mini Apps opened
+// with the top-bar Open App/menu entry as well as the reply-keyboard Web App button. The bot must
+// implement /start m1_<encoded items>. Cart intentionally remains saved until buyer can verify acceptance.
+function checkout(){
+ const current=lines();
+ if(!current.length){notice('Корзина пуста. Сначала добавь товар.',true);return}
+ if(!tg||typeof tg.openTelegramLink!=='function'){notice('Не удалось открыть Telegram. Открой магазин через приложение Telegram; корзина сохранена.',true);return}
+ let chunks;
+ try{
+  chunks=current.map(l=>{
+   const id=Number(l.p.id), quantity=Number(l.q);
+   let size=String(l.size||'NA').trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
+   if(!size||['NA','NONE','NOSIZE','NASIZE'].includes(size))size='NA';
+   if(['ONESIZE','FREESIZE','UNISIZE','UNIVERSAL'].includes(size))size='NA';
+   if(size.length>4)size=size.slice(0,4);
+   if(!Number.isSafeInteger(id)||id<1||!Number.isSafeInteger(quantity)||quantity<1||quantity>50||!(/^[A-Z0-9]{1,4}$/.test(size)))throw new Error('Проверь ID, количество и размер позиции.');
+   return `${id}-${quantity}-${size}`;
+  });
+ }catch(error){notice('Не удалось подготовить заказ: '+error.message+' Корзина сохранена.',true);return}
+ const startPayload='m1_'+chunks.join('_');
+ if(startPayload.length>64||!/^[A-Za-z0-9_-]+$/.test(startPayload)){notice('Заказ слишком большой для ссылки Telegram. Уменьши количество разных позиций; корзина сохранена.',true);return}
+ const url='https://t.me/malice_market_bot?start='+startPayload;
+ notice('Открываю чат MALICE. Если появится кнопка «Запустить» / Start — нажми её, чтобы бот получил заказ. Корзина пока сохранена.');
+ try{
+  tg.openTelegramLink(url);
+ }catch(error){console.error('[MALICE checkout deep link]',error);notice('Не удалось открыть чат бота. Корзина сохранена — попробуй ещё раз.',true)}
+}
+const name=tg?.initDataUnsafe?.user?.first_name;if(name)$('#hello').textContent=`Привет, ${name} 👋`;
+window.addEventListener('error',e=>{console.error('[MALICE page]',e.message);try{notice('Ошибка страницы: '+e.message,true)}catch{}});
+renderCatalog();render();
+})();
+</script>
+</body>
+</html>
